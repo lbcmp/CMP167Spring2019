@@ -10,57 +10,54 @@ public class Area {
 	static Scanner scnr = new Scanner(System.in);
 	
 	/*
-	 * Method: RectArea()
-	 * Input: width, length
-	 * Process: area = l * w
-	 * Output: area
+	 * RectArea: int
+	 * Parameters: width, length
+	 * Calculates rectangle area
 	 */
-	public static void RectArea() {
-		System.out.println("Let's calculate the area of a rectangle");
-		
-		System.out.println("Enter width:");
-		int width = scnr.nextInt();
-		System.out.println("Enter length:");
-		int length = scnr.nextInt();
-		int area = width * length;
-		System.out.println("The area is " + area + "\n");
+	public static int RectArea(int width, int length) {
+		return width * length;
 	}
 	
 	/*
-	 * Method: CircleArea()
-	 * Input: radius
-	 * Process: area = pi * r^2
-	 * Output: area
+	 * CircleArea: double
+	 * Parameter: radius
+	 * Calculates circle area
 	 */
-	public static void CircleArea() {
-		System.out.println("Let's calculate the area of a circle");
-		
-		System.out.println("Enter radius:");
-		double radius = scnr.nextInt();
-		double areaCircle = Math.PI * Math.pow(radius, 2);
-		System.out.println("The area is " + areaCircle + "\n");
+	public static double CircleArea(double radius) {
+		return (Math.PI * Math.pow(radius, 2));
 	}
 	
-	/* 
-	 * Method: TriArea()
-	 * Input: base, height
-	 * Process: area = (b * h) / 2
-	 * Output: area
+	/*
+	 * RectArea: double
+	 * Parameters: base, height
+	 * Calculates triangle area
 	 */
-	public static void TriArea() {
-		System.out.println("Let's calculate the area of a triangle");
-		
-		System.out.println("Enter base:");
-		double base = scnr.nextDouble();
-		System.out.println("Enter height:");
-		double height = scnr.nextDouble();
-		double areaTri = (base * height) / 2;
-		System.out.println("The area is " + areaTri);
+	public static double TriArea(double base, double height) {
+		return (base * height) / 2;
 	}
 
-	public static void main(String[] args) {
-		RectArea();
-		CircleArea();
-		TriArea();
-	}
+		public static void main(String[] args) {
+			System.out.println("Let's calculate the area of a rectangle");
+			System.out.println("Enter width:");
+			int width = scnr.nextInt();
+			System.out.println("Enter length:");
+			int length = scnr.nextInt();
+			int areaRect = RectArea(width, length);
+			System.out.println("The area is " + areaRect + "\n");
+			
+			System.out.println("Let's calculate the area of a circle");
+			System.out.println("Enter radius:");
+			double radius = scnr.nextInt();
+			double areaCirc = CircleArea(radius);
+			System.out.println("The area is " + areaCirc + "\n");
+			
+			System.out.println("Let's calculate the area of a triangle");
+			System.out.println("Enter base:");
+			double base = scnr.nextDouble();
+			System.out.println("Enter height:");
+			double height = scnr.nextDouble();
+			double areaTri = TriArea(base, height);
+			System.out.println("The area is " + areaTri + "\n");
+			
+		}
 }
