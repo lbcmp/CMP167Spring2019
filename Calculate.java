@@ -24,30 +24,12 @@ public class Calculate {
 	}
 	
 	public static void main(String[] args) {
-		/* int[] array = {3, 4, 5, 8};
+		int[] array = {3, 4, 5, 8};
 		System.out.println("Sum is " + sumListMethod(array));
 		System.out.println("Avg is " + avgListMethod(array));
 		System.out.println("The number of odd elements is " + oddElements(array));
-		*/
 		
-		int[] array = {121, 4, 1000};
-	      int max = array[0];
-	      int min = array[0];
-	      int median = array[0];
-	      
-	      for (int i = 0; i < array.length; ++i) {
-	         if (array[i] > max) {
-	          max = array[i];  
-	         }
-	         else if (array[i] < min) {
-	          min = array[i];  
-	         }
-	      }
-	      for (int i = 0; i < array.length; ++i) {
-	         if ((array[i] < max) && (array[i] > min)) {
-	            median = array[i];
-	         }
-	      }
-	      System.out.println(median);
+		
+	
 	}
 }
